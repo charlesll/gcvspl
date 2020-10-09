@@ -1,7 +1,7 @@
-if is_unix()
+if Sys.isunix()
     cd(joinpath(dirname(@__FILE__), "src", "gcvspline"))
 
-    suffix = @static is_apple()? "dylib" : "so"
+    suffix = @static Sys.isapple() ? "dylib" : "so"
     try
        run(`make FC=ifort SUFFIX=$suffix`)
     catch
@@ -10,7 +10,7 @@ if is_unix()
 else # windows
 	warn("Windows automatic compilation of GCVSPL.F not implemented. Please see the installation page of the documentation for details.")
 end
-	
+
 # Windows example from Dierckx.jl... Don't have windows so I can't really work on this for GCVSPL
 
 #@windows_only begin

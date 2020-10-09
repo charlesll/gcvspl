@@ -2,6 +2,7 @@
 *.jl.*.cov
 *.jl.mem
 .DS_STORE
+build.log
 gcvspl.o
 libgcvspl.so
 libgcvspl.dylib
