@@ -1,4 +1,4 @@
-# gcvspl News
+# Gcvspl News
 
 Copyright (c) 2020 Dr. Charles Le Losq
 
@@ -8,4 +8,4 @@ Licence MIT: see LICENCE.md
 
 # 0.1
 
-- Release of a test version of gcvspl, a wrapper for the GCVspline FORTRAN library. It was previously wrapped in Spectra
+- Release of a test version of Gcvspl, a wrapper for the GCVspline FORTRAN library. It was previously wrapped in Spectra

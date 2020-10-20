@@ -1,4 +1,4 @@
-# gcvspl
+# Gcvspl
 
 Copyright (c) 2020 Dr. Charles Le Losq
 
