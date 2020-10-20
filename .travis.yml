@@ -4,7 +4,7 @@ os:
   - linux
   - osx
 julia:
-  - 0.5
+  - 1.5
 addons:
   apt_packages:
     - gfortran
@@ -13,7 +13,7 @@ notifications:
 script:
   - if [ $TRAVIS_OS_NAME = osx ]; then brew install gcc; fi
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
-  - PYTHON="" julia -e 'Pkg.clone(pwd()); Pkg.build("Spectra"); Pkg.test("Spectra"; coverage=true)'
+  - PYTHON="" julia -e 'Pkg.clone(pwd()); Pkg.build("gcvspl"); Pkg.test("gcvspl"; coverage=true)'
 after_success:
   - julia -e 'Pkg.add("Documenter")'
-  - julia -e 'cd(Pkg.dir("Spectra")); include(joinpath("docs", "make.jl"))'
+  - julia -e 'cd(Pkg.dir("gcvspl")); include(joinpath("docs", "make.jl"))'
